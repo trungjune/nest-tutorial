@@ -1,14 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ArticleModule } from '../backend/article/article.module';
-import { CategoryModule } from '../backend/category/category.module';
-import { MenuModule } from '../backend/menu/menu.module';
-import { OrderModule } from '../backend/order/order.module';
-import { ProductModule } from '../backend/product/product.module';
-import { TransactionModule } from '../backend/transaction/transaction.module';
-import { UserModule } from '../backend/user/user.module';
+import { ArticleModule } from './article/article.module';
+import { CategoryModule } from './category/category.module';
+import { MenuModule } from './menu/menu.module';
+import { OrderModule } from './order/order.module';
+import { ProductModule } from './product/product.module';
+import { TransactionModule } from './transaction/transaction.module';
+import { UserModule } from './user/user.module';
 
-@Module({})
-export class FrontendModule {
+@Module({
   imports: [
     ArticleModule,
     CategoryModule,
@@ -17,5 +16,6 @@ export class FrontendModule {
     ProductModule,
     TransactionModule,
     UserModule,
-  ];
-}
+  ],
+})
+export class FrontendModule {}
